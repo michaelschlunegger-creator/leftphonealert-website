@@ -12,7 +12,7 @@ http://localhost:8765/.
 
 - `dist/index.html` — product website
 - `dist/support.html` — support and contact information
-- `dist/privacy.html` — privacy policy draft, awaiting publisher approval
+- `dist/privacy.html` — privacy policy
 
 The original phone and Watch screenshots are preserved. The assets include both
 the original Navarro Studios logo and the refined book/N logo.
@@ -21,7 +21,7 @@ the original Navarro Studios logo and the refined book/N logo.
 
 Connect this repository to Cloudflare Pages when ready to publish.
 Use no framework, no build command, and `dist` as the output directory.
-Before public deployment, finalize the privacy policy and its effective date.
+The publisher approved the privacy policy and support-message handling on 10 October 2026.
 The App Store release remains pending; update the coming-soon message and add the
 verified App Store link when the app is released.
 
