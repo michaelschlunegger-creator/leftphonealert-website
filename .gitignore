@@ -1,0 +1,12 @@
+.DS_Store
+*.zip
+.env
+.env.*
+!.env.example
+node_modules/
+.wrangler/
+project-status.json
+verification.json
+website-preview.png
+logo-refinement-prompt.txt
+HOSTING.txt
