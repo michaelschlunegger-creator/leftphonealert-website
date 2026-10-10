@@ -30,4 +30,7 @@ verified App Store link when the app is released.
 leftphonealert.support@gmail.com
 
 This repository contains website files only; the iPhone and Watch app source is
-maintained separately. No public website deployment is configured yet.
+maintained separately. Live website: https://leftphonealert-website.pages.dev
+
+Cloudflare Pages deploys `codex/website-initial` automatically with no build
+command and `dist` as the output directory.
