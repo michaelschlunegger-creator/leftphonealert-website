@@ -43,6 +43,13 @@ leftphonealert.support@gmail.com
 
 ## Search and sharing
 
+The App Store QR code appears in the hero, below the video player, and in the
+final download section. Each code also links directly to the App Store listing.
+The original verified QR asset is reused unchanged, with its white quiet zone
+preserved. Display sizes are 135px and 180px (whole multiples of the 45-module
+symbol including its border). Native barcode decoding checks passed at both
+display sizes. Direct App Store buttons remain available for phone visitors.
+
 All three public pages have unique titles/descriptions, canonical URLs, social
 sharing metadata and a 1200×630 sharing image. The homepage includes JSON-LD
 for the website, app, publisher and promotional film. No ratings or reviews
