@@ -41,6 +41,25 @@ available if embedded playback is unavailable.
 
 leftphonealert.support@gmail.com
 
+## Search and sharing
+
+All three public pages have unique titles/descriptions, canonical URLs, social
+sharing metadata and a 1200×630 sharing image. The homepage includes JSON-LD
+for the website, app, publisher and promotional film. No ratings or reviews
+are invented. `robots.txt` advertises `sitemap.xml`, which lists the homepage,
+support and privacy pages at their Cloudflare canonical URLs. `404.html`
+prevents nonexistent URLs from falling back to an indexable homepage.
+
+Displayed screenshots and the studio logo use lossless WebP copies under
+`dist/assets/web`; originals remain unchanged. The image payload decreases
+from 9,270,194 to 2,467,878 bytes (73%). The video remains click-to-play.
+
+Next external step: verify this URL-prefix property in Google Search Console
+and submit `https://leftphonealert-website.pages.dev/sitemap.xml`. Verification
+and submission have not been completed. Indexing and rankings take time and
+are not guaranteed. If adding a custom domain later, update canonical URLs,
+sitemap and JSON-LD together and redirect the old domain to the new one.
+
 This repository contains website files only; the iPhone and Watch app source is
 maintained separately. Live website: https://leftphonealert-website.pages.dev
 
