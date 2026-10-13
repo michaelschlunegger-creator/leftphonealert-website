@@ -30,25 +30,25 @@ if (trailer && trailerPlay && trailerStatus) {
       return;
     }
     if (trailer.ended) trailer.currentTime = 0;
-    trailerStatus.textContent = 'Loading film…';
+    trailerStatus.textContent = 'Loading demo…';
     trailer.play().catch(() => {
       trailerStatus.textContent = 'Unable to start here. Try “Open video directly” below.';
     });
   });
   trailer.addEventListener('playing', () => {
-    trailerPlay.textContent = '❚❚ Pause film';
+    trailerPlay.textContent = '❚❚ Pause demo';
     trailerStatus.textContent = '';
   });
   trailer.addEventListener('pause', () => {
-    trailerPlay.textContent = trailer.ended ? '↻ Replay short film' : '▶ Continue film';
+    trailerPlay.textContent = trailer.ended ? '↻ Replay demo' : '▶ Continue demo';
     trailerStatus.textContent = '';
   });
   trailer.addEventListener('ended', () => {
-    trailerPlay.textContent = '↻ Replay short film';
+    trailerPlay.textContent = '↻ Replay demo';
     trailerStatus.textContent = '';
   });
   trailer.addEventListener('waiting', () => {
-    trailerStatus.textContent = 'Loading film…';
+    trailerStatus.textContent = 'Loading demo…';
   });
   trailer.addEventListener('error', () => {
     trailerStatus.textContent = 'Unable to load here. Try “Open video directly” below.';
