@@ -24,16 +24,29 @@ const trailerPlay = document.querySelector('#trailer-play');
 const trailerStatus = document.querySelector('#trailer-status');
 if (trailer && trailerPlay && trailerStatus) {
   trailerPlay.hidden = false;
-  trailerPlay.addEventListener('click', () => {
-    if (!trailer.paused && !trailer.ended) {
-      trailer.pause();
-      return;
-    }
+  const startTrailer = () => {
     if (trailer.ended) trailer.currentTime = 0;
     trailerStatus.textContent = 'Loading demo…';
     trailer.play().catch(() => {
       trailerStatus.textContent = 'Unable to start here. Try “Open video directly” below.';
     });
+  };
+  document.querySelector('#demo-link')?.addEventListener('click', event => {
+    event.preventDefault();
+    history.pushState(null, '', '#trailer-video');
+    const headerHeight = document.querySelector('header')?.getBoundingClientRect().height || 0;
+    const top = trailer.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top: Math.max(0, top), behavior: reducedMotion ? 'auto' : 'smooth'});
+    trailer.focus({preventScroll: true});
+    startTrailer();
+  });
+  trailerPlay.addEventListener('click', () => {
+    if (!trailer.paused && !trailer.ended) {
+      trailer.pause();
+      return;
+    }
+    startTrailer();
   });
   trailer.addEventListener('playing', () => {
     trailerPlay.textContent = '❚❚ Pause demo';
