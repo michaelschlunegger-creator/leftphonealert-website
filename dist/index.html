@@ -6,8 +6,8 @@
   <meta name="description" content="Smart, customisable phone protection for iPhone and Apple Watch. Discover LeftPhoneAlert, with clear Watch alerts, Smart Context and named Safe Zones.">
   <meta name="theme-color" content="#0b0e0c">
   <title>LeftPhoneAlert — Smart protection on your wrist</title>
-  <link rel="stylesheet" href="site.css">
-  <script src="site.js" defer></script>
+  <link rel="stylesheet" href="site.css?v=20261013-video2">
+  <script src="site.js?v=20261013-video2" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -45,10 +45,13 @@
         <p class="small-note" id="trailer-note">35-second film. Café scenes are illustrative. The real Watch alert shows a connection-loss demonstration; actual alert timing varies.</p>
       </div>
       <figure class="trailer-player">
-        <video controls playsinline preload="none" poster="assets/video/leftphonealert-trailer-poster.jpg" width="1080" height="1920" aria-label="LeftPhoneAlert promotional film" aria-describedby="trailer-note">
-          <source src="assets/video/leftphonealert-trailer.mp4" type="video/mp4">
-          Your browser does not support embedded video. <a href="assets/video/leftphonealert-trailer.mp4">Watch the LeftPhoneAlert film</a>.
+        <video id="trailer-video" controls playsinline preload="none" poster="assets/video/leftphonealert-trailer-poster.jpg" width="720" height="1280" aria-label="LeftPhoneAlert promotional film" aria-describedby="trailer-note">
+          <source src="assets/video/leftphonealert-trailer-web.mp4" type="video/mp4">
+          Your browser does not support embedded video. <a href="assets/video/leftphonealert-trailer-web.mp4">Watch the LeftPhoneAlert film</a>.
         </video>
+        <button class="button primary trailer-play" id="trailer-play" type="button" aria-controls="trailer-video" hidden>▶ Play short film</button>
+        <p class="trailer-status small-note" id="trailer-status" role="status"></p>
+        <a class="text-link trailer-direct" href="assets/video/leftphonealert-trailer-web.mp4">Open video directly <span aria-hidden="true">↗</span></a>
         <figcaption>LeftPhoneAlert · The short film</figcaption>
       </figure>
     </section>

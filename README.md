@@ -30,9 +30,12 @@ US price verified on 13 October 2026: $4.99, one-time purchase.
 The homepage embeds the publisher-selected `LeftPhoneAlert.mp4` export as a
 35-second film with native playback controls, inline mobile playback and no
 autoplay. `preload="none"` avoids loading the movie before the visitor plays it.
-The web copy in `dist/assets/video/leftphonealert-trailer.mp4` retains the
-1080×1920 dimensions, full duration and audio, compressed to about 17.5 MB for
-Cloudflare Pages' per-file limit. The original in Google Drive is unchanged.
+The active web copy in `dist/assets/video/leftphonealert-trailer-web.mp4` uses
+720×1280 dimensions and is about 5.8 MB for faster loading. It retains the full
+duration and audio. The earlier 1080×1920 web copy and the original in Google
+Drive are preserved. A prominent Play/Pause/Replay button starts playback from
+a visitor's click and resets the movie after it ends. A direct video link is
+available if embedded playback is unavailable.
 
 ## Contact
 

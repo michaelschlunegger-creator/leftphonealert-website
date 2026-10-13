@@ -18,3 +18,39 @@ document.querySelectorAll('[data-screen]').forEach(button => {
     });
   });
 });
+
+const trailer = document.querySelector('#trailer-video');
+const trailerPlay = document.querySelector('#trailer-play');
+const trailerStatus = document.querySelector('#trailer-status');
+if (trailer && trailerPlay && trailerStatus) {
+  trailerPlay.hidden = false;
+  trailerPlay.addEventListener('click', () => {
+    if (!trailer.paused && !trailer.ended) {
+      trailer.pause();
+      return;
+    }
+    if (trailer.ended) trailer.currentTime = 0;
+    trailerStatus.textContent = 'Loading film…';
+    trailer.play().catch(() => {
+      trailerStatus.textContent = 'Unable to start here. Try “Open video directly” below.';
+    });
+  });
+  trailer.addEventListener('playing', () => {
+    trailerPlay.textContent = '❚❚ Pause film';
+    trailerStatus.textContent = '';
+  });
+  trailer.addEventListener('pause', () => {
+    trailerPlay.textContent = trailer.ended ? '↻ Replay short film' : '▶ Continue film';
+    trailerStatus.textContent = '';
+  });
+  trailer.addEventListener('ended', () => {
+    trailerPlay.textContent = '↻ Replay short film';
+    trailerStatus.textContent = '';
+  });
+  trailer.addEventListener('waiting', () => {
+    trailerStatus.textContent = 'Loading film…';
+  });
+  trailer.addEventListener('error', () => {
+    trailerStatus.textContent = 'Unable to load here. Try “Open video directly” below.';
+  });
+}
