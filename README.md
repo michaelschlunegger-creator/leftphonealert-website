@@ -22,8 +22,17 @@ the original Navarro Studios logo and the refined book/N logo.
 Connect this repository to Cloudflare Pages when ready to publish.
 Use no framework, no build command, and `dist` as the output directory.
 The publisher approved the privacy policy and support-message handling on 10 October 2026.
-The App Store release remains pending; update the coming-soon message and add the
-verified App Store link when the app is released.
+The app is available on the App Store: https://apps.apple.com/app/id6783860401.
+US price verified on 13 October 2026: $4.99, one-time purchase.
+
+## Promotional film
+
+The homepage embeds the publisher-selected `LeftPhoneAlert.mp4` export as a
+35-second film with native playback controls, inline mobile playback and no
+autoplay. `preload="none"` avoids loading the movie before the visitor plays it.
+The web copy in `dist/assets/video/leftphonealert-trailer.mp4` retains the
+1080×1920 dimensions, full duration and audio, compressed to about 17.5 MB for
+Cloudflare Pages' per-file limit. The original in Google Drive is unchanged.
 
 ## Contact
 
