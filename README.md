@@ -96,3 +96,6 @@ original simulator captures. Each opens at larger size on click. The page identi
 simulator/status limitations. Its stylesheet is isolated from product/privacy pages.
 Local checks cover asset/link/anchor references, structured metadata, desktop and
 390px mobile layout, screenshot loading and manual-pairing navigation.
+
+Support and Privacy have an explicit Home link. Their navigation remains visible
+while scrolling, and Support section links leave room below that header.
