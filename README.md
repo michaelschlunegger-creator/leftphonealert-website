@@ -72,3 +72,27 @@ maintained separately. Live website: https://leftphonealert-website.pages.dev
 
 Cloudflare Pages deploys `codex/website-initial` automatically with no build
 command and `dist` as the output directory.
+
+## Setup and secure pairing guide — 14 October 2026
+
+The existing Support page now covers installation on iPhone and Watch, automatic
+reconnection, More → Open Setup Wizard, permissions, Protection → Watch & Pairing
+→ Pair Apple Watch, and the alternative Watch Manage Guard → Phone Pairing route.
+Code confirmation belongs on the iPhone; pairing completion is kept separate from
+active Guard/Protected status. Recovery advice avoids unnecessary revocation or
+unpairing the Apple Watch. Existing alert timing/privacy/diagnostics FAQs remain.
+
+Button labels and flows were checked against the preserved App Store 1.0(72)
+source, whose 285 archive inputs match `iphone-only72/input-sha256.json`. The app
+source is backed up separately at PhoneGuard2 commit
+`f5ace9a4b151f209f14670af0ca7edfa03480b31`. Xcode27.0 simulator Release builds
+used version/build overrides1.0/72 without production edits. Genuine entry/setup
+screens were captured; verification-code and completed physical Bluetooth pairing
+are described from unchanged production UI/source, not represented by fabricated
+success screenshots. Simulator is not alarm/background/Bluetooth proof.
+
+Four screenshots under `dist/assets/support/` are resized/lossless WebP copies of
+original simulator captures. Each opens at larger size on click. The page identifies
+simulator/status limitations. Its stylesheet is isolated from product/privacy pages.
+Local checks cover asset/link/anchor references, structured metadata, desktop and
+390px mobile layout, screenshot loading and manual-pairing navigation.
