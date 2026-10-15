@@ -18,7 +18,7 @@
   };
   if (navigator.share || navigator.clipboard?.writeText) {
     linkButton.hidden = false;
-    if (!navigator.share) linkButton.querySelector('span').textContent = 'Copy app introduction & link';
+    if (!navigator.share) linkButton.querySelector('span').textContent = 'Copy app introduction & links';
   }
   linkButton.addEventListener('click', () => {
     say('');
