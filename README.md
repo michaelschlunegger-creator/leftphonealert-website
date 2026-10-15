@@ -99,3 +99,31 @@ Local checks cover asset/link/anchor references, structured metadata, desktop an
 
 Support and Privacy have an explicit Home link. Their navigation remains visible
 while scrolling, and Support section links leave room below that header.
+
+## Digital app card and one-tap sharing — 15 October 2026
+
+`/share` is a mobile sharing page with a native Share action for a short app
+introduction and the homepage URL. Where file sharing is available, a second
+action shares the app card as a JPG. The file is fetched before the tap so the
+share action retains iPhone user activation. Cancelling does not show an error.
+Browsers without native sharing offer copy-to-clipboard; direct image/download
+links and a visible website address remain available without JavaScript. No
+messages are sent automatically, no contacts are read and no tracking was added.
+
+The page includes a Safari Add to Home Screen explanation, dedicated shortcut
+icons and `share.webmanifest`. The shortcut opens `/share`; no service worker or
+offline guarantee is included. Saving the image to Photos/Favourites is the
+alternative for showing the card or sharing through WhatsApp/Messages/AirDrop.
+
+The 1080×1350 card uses the existing icon, genuine phone and Watch screenshots,
+and the unchanged App Store QR asset. Editable layout: `design/share-card.html`.
+Exports: `dist/assets/share/leftphonealert-digital-card.jpg` and `.png`. Browser
+capture is re-encoded to actual PNG/JPEG, with formats/dimensions verified.
+Native Vision QR decoding checks passed for both exports and 390px/540px-wide
+JPEG copies at quality80. Each decoded `https://apps.apple.com/app/id6783860401`.
+`design/check-share-qr.swift` is the artifact check.
+
+The public page is linked from the homepage footer and listed in the sitemap.
+Checks cover script syntax, asset/link/manifest references, complete image loads,
+native-share/file-share control availability, 390px layout without overflow and
+desktop layout. No physical iPhone sharing or recipient delivery is claimed.
