@@ -1,6 +1,7 @@
 (() => {
+  const appStoreURL = 'https://apps.apple.com/app/id6783860401';
   const homeURL = 'https://leftphonealert-website.pages.dev/';
-  const text = 'LeftPhoneAlert: quick Apple Watch alerts, movement-aware protection and personal Safe Zones to help keep your iPhone close. For iPhone + Apple Watch. One-time purchase. No subscription.';
+  const text = 'LeftPhoneAlert: quick Apple Watch alerts, movement-aware protection and personal Safe Zones to help keep your iPhone close. For iPhone + Apple Watch. One-time purchase. No subscription.' + '\n\nApp Store: ' + appStoreURL;
   const imageURL = new URL('assets/share/leftphonealert-digital-card.jpg', document.currentScript.src);
   const linkButton = document.getElementById('share-link');
   const imageButton = document.getElementById('share-image');
@@ -9,8 +10,8 @@
   const say = (message) => { status.textContent = message; };
   const copyLink = async () => {
     try {
-      await navigator.clipboard.writeText(text + '\n' + homeURL);
-      say('App introduction and website copied. Paste into WhatsApp, Messages or an email.');
+      await navigator.clipboard.writeText(text + '\nWebsite: ' + homeURL);
+      say('App introduction, App Store link and website copied. Paste into WhatsApp, Messages or an email.');
     } catch (_) {
       say('Copy the website address below, or open the card to save and share it.');
     }
@@ -38,7 +39,7 @@
   imageButton.addEventListener('click', () => {
     if (!imageFile) return;
     say('');
-    const data = { files: [imageFile], title: 'LeftPhoneAlert', text: text + '\n' + homeURL };
+    const data = { files: [imageFile], title: 'LeftPhoneAlert', text: text + '\nWebsite: ' + homeURL };
     // Keep the native share call within the tap. The file is prepared before the tap.
     navigator.share(navigator.canShare(data) ? data : { files: [imageFile] }).catch((error) => {
       if (error.name !== 'AbortError') say('Open the image below, save it to Photos, then share it from there.');
