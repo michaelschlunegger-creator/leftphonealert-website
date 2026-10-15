@@ -1,7 +1,8 @@
 (() => {
   const appStoreURL = 'https://apps.apple.com/app/id6783860401';
   const homeURL = 'https://leftphonealert-website.pages.dev/';
-  const text = 'LeftPhoneAlert: quick Apple Watch alerts, movement-aware protection and personal Safe Zones to help keep your iPhone close. For iPhone + Apple Watch. One-time purchase. No subscription.' + '\n\nApp Store: ' + appStoreURL;
+  const youtubeURL = 'https://www.youtube.com/shorts/2Ys0Il14no8';
+  const text = 'LeftPhoneAlert: quick Apple Watch alerts, movement-aware protection and personal Safe Zones to help keep your iPhone close. For iPhone + Apple Watch. One-time purchase. No subscription.' + '\n\nApp Store: ' + appStoreURL + '\nYouTube: ' + youtubeURL;
   const imageURL = new URL('assets/share/leftphonealert-digital-card.jpg', document.currentScript.src);
   const linkButton = document.getElementById('share-link');
   const imageButton = document.getElementById('share-image');
@@ -11,7 +12,7 @@
   const copyLink = async () => {
     try {
       await navigator.clipboard.writeText(text + '\nWebsite: ' + homeURL);
-      say('App introduction, App Store link and website copied. Paste into WhatsApp, Messages or an email.');
+      say('App introduction, App Store, YouTube and website links copied. Paste into WhatsApp, Messages or an email.');
     } catch (_) {
       say('Copy the website address below, or open the card to save and share it.');
     }

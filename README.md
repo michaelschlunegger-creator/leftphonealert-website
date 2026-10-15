@@ -132,6 +132,7 @@ native-share/file-share control availability, 390px layout without overflow and
 desktop layout. No physical iPhone sharing or recipient delivery is claimed.
 
 The sharing introduction includes the direct App Store URL
-`https://apps.apple.com/app/id6783860401` as well as the website. This applies
+`https://apps.apple.com/app/id6783860401`, the YouTube trailer
+`https://www.youtube.com/shorts/2Ys0Il14no8`, and the website. This applies
 to native link sharing, the image-card caption and copy-to-clipboard fallback.
 The flyer image and QR artwork are unchanged by this copy update.
