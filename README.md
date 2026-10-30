@@ -27,15 +27,22 @@ US price verified on 13 October 2026: $4.99, one-time purchase.
 
 ## Promotional film
 
-The homepage embeds the publisher-selected `LeftPhoneAlert.mp4` export as a
-35-second film with native playback controls, inline mobile playback and no
-autoplay. `preload="none"` avoids loading the movie before the visitor plays it.
-The active web copy in `dist/assets/video/leftphonealert-trailer-web.mp4` uses
-720×1280 dimensions and is about 5.8 MB for faster loading. It retains the full
-duration and audio. The earlier 1080×1920 web copy and the original in Google
-Drive are preserved. A prominent Play/Pause/Replay button starts playback from
-a visitor's click and resets the movie after it ends. A direct video link is
-available if embedded playback is unavailable.
+The homepage embeds the publisher-approved **Clip 1 — V2**, approved on
+30 October 2026: the café film with the “Find My ALERT / 4 MINUTES. / FAR TOO LATE.”
+opening overlay and the LeftPhoneAlert icon and download prompt below the footage.
+The approved original is preserved in Google Drive:
+https://drive.google.com/file/d/173sEfnrdkwErVs1XPBKE9LMe71d9iMF7/view
+
+The active website asset is `dist/assets/video/leftphonealert-clip-1-v2.mp4`:
+12.4 seconds, 720×1280, 30 fps, with the approved visuals and audio. This web copy
+is about 2.4 MB and is optimized for progressive playback. Its matching first-frame
+poster is `leftphonealert-clip-1-v2-poster.jpg`. The video metadata, embedded player
+and direct video link all reference this version. Previous video assets and the
+original Drive movie are preserved.
+
+Native controls, inline mobile playback, click-to-play behavior and
+`preload="none"` are retained. The Play/Pause/Replay button starts playback from a
+visitor's click, and the direct video link remains available as a fallback.
 
 ## Contact
 
@@ -136,3 +143,16 @@ The sharing introduction includes the direct App Store URL
 `https://www.youtube.com/shorts/2Ys0Il14no8`, and the website. This applies
 to native link sharing, the image-card caption and copy-to-clipboard fallback.
 The flyer image and QR artwork are unchanged by this copy update.
+
+## Clip 1 V2 and Find My positioning — 30 October 2026
+
+The homepage now leads with “Find My ALERT. 4 minutes. Far too late.”, the two
+original app icons and a direct App Store action. A compact context line identifies
+the four-minute figure as the publisher-reported test result; the new FAQ answers
+why someone with Find My would use LeftPhoneAlert and retains the existing total
+alert-timing limits. The video section repeats the first-seconds message.
+
+The approved 1080×1920 original is also preserved as
+`dist/assets/video/leftphonealert-clip-1-v2-1080.mp4` for the authorized Metricool
+publication. It matches the approved Drive file bytes. The embedded 720×1280
+web copy is approximately 2.4 MB; the player remains click-to-play.
