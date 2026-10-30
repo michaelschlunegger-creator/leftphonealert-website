@@ -156,3 +156,13 @@ The approved 1080×1920 original is also preserved as
 `dist/assets/video/leftphonealert-clip-1-v2-1080.mp4` for the authorized Metricool
 publication. It matches the approved Drive file bytes. The embedded 720×1280
 web copy is approximately 2.4 MB; the player remains click-to-play.
+
+## V2 marketing pack and paired-Watch qualification — 30 October 2026
+
+A prominent “Requires iPhone + paired Apple Watch” label appears before the main
+download action. The current film adds that requirement on its opening and end
+card; its new `leftphonealert-clip-1-v2-watch-required` files preserve all prior
+video assets. The sharing page uses the new V2 flyer/card and introduction.
+The website’s video section replaces the older YouTube link in sharing copy until
+the new Short is public. Social previews now use the V2 campaign graphic.
+All prior card and video files remain in the repository and on their original URLs.

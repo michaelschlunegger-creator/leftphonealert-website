@@ -18,3 +18,5 @@
 .comparison-context{max-width:450px;margin:20px 0 0;color:var(--muted);font-size:12px;line-height:1.6}
 .hero-copy .hero-intro{line-height:1.65}
 @media(max-width:760px){.app-comparison{gap:12px;margin-bottom:22px}.comparison-app{gap:8px;font-size:14px}.comparison-app img{width:48px;height:48px}.comparison-context{font-size:11px}.hero-actions{gap:17px}.hero-intro{margin-bottom:0}}
+
+.device-requirement{display:inline-block;margin:0 0 18px;padding:10px 13px;border:1px solid #7e542d;border-radius:9px;background:#1b160f;color:var(--ink);font-size:15px;font-weight:700;line-height:1.5}
