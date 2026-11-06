@@ -19,51 +19,47 @@ document.querySelectorAll('[data-screen]').forEach(button => {
   });
 });
 
-const trailer = document.querySelector('#trailer-video');
-const trailerPlay = document.querySelector('#trailer-play');
-const trailerStatus = document.querySelector('#trailer-status');
-if (trailer && trailerPlay && trailerStatus) {
-  trailerPlay.hidden = false;
-  const startTrailer = () => {
-    if (trailer.ended) trailer.currentTime = 0;
-    trailerStatus.textContent = 'Loading demo…';
-    trailer.play().catch(() => {
-      trailerStatus.textContent = 'Unable to start here. Try “Open video directly” below.';
-    });
-  };
-  document.querySelector('#demo-link')?.addEventListener('click', event => {
-    event.preventDefault();
-    history.pushState(null, '', '#trailer-video');
-    const headerHeight = document.querySelector('header')?.getBoundingClientRect().height || 0;
-    const top = trailer.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    window.scrollTo({top: Math.max(0, top), behavior: reducedMotion ? 'auto' : 'smooth'});
-    trailer.focus({preventScroll: true});
-    startTrailer();
-  });
-  trailerPlay.addEventListener('click', () => {
-    if (!trailer.paused && !trailer.ended) {
-      trailer.pause();
+document.querySelectorAll('[data-video-demo]').forEach(demo => {
+  const video = demo.querySelector('video');
+  const playButton = demo.querySelector('[data-video-play]');
+  const status = demo.querySelector('[data-video-status]');
+  if (!video || !playButton || !status) return;
+  const title = demo.querySelector('h3').textContent;
+  playButton.hidden = false;
+  playButton.addEventListener('click', () => {
+    if (!video.paused && !video.ended) {
+      video.pause();
       return;
     }
-    startTrailer();
+    if (video.ended) video.currentTime = 0;
+    status.textContent = 'Loading video…';
+    video.play().catch(() => {
+      status.textContent = 'Unable to start here. Try the direct video link below.';
+    });
   });
-  trailer.addEventListener('playing', () => {
-    trailerPlay.textContent = '❚❚ Pause demo';
-    trailerStatus.textContent = '';
+  video.addEventListener('play', () => {
+    if (video.paused) return;
+    document.querySelectorAll('[data-video-demo] video').forEach(other => {
+      if (other !== video) other.pause();
+    });
   });
-  trailer.addEventListener('pause', () => {
-    trailerPlay.textContent = trailer.ended ? '↻ Replay demo' : '▶ Continue demo';
-    trailerStatus.textContent = '';
+  video.addEventListener('playing', () => {
+    if (video.paused) return;
+    playButton.textContent = '❚❚ Pause ' + title;
+    status.textContent = '';
   });
-  trailer.addEventListener('ended', () => {
-    trailerPlay.textContent = '↻ Replay demo';
-    trailerStatus.textContent = '';
+  video.addEventListener('pause', () => {
+    playButton.textContent = (video.ended ? '↻ Replay ' : '▶ Continue ') + title;
+    status.textContent = '';
   });
-  trailer.addEventListener('waiting', () => {
-    trailerStatus.textContent = 'Loading demo…';
+  video.addEventListener('ended', () => {
+    playButton.textContent = '↻ Replay ' + title;
+    status.textContent = '';
   });
-  trailer.addEventListener('error', () => {
-    trailerStatus.textContent = 'Unable to load here. Try “Open video directly” below.';
+  video.addEventListener('waiting', () => {
+    status.textContent = 'Loading video…';
   });
-}
+  video.addEventListener('error', () => {
+    status.textContent = 'Unable to load here. Try the direct video link below.';
+  });
+});

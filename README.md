@@ -166,3 +166,14 @@ video assets. The sharing page uses the new V2 flyer/card and introduction.
 The website’s video section replaces the older YouTube link in sharing copy until
 the new Short is public. Social previews now use the V2 campaign graphic.
 All prior card and video files remain in the repository and on their original URLs.
+
+
+## Coffee Shop and Taxi use cases — 6 November 2026
+
+The homepage now shows both use cases, with separate accessible players and direct video links.
+The existing Coffee Shop video is retained without changing its file or URL. The Taxi player uses
+the exact user-supplied `1106.mp4`, copied as `dist/assets/video/leftphonealert-taxi-2026-11-06.mp4`
+(SHA-256 `2587674fee4cd2ac73b15d808756a6cf03f2a9bf0cd678959fb7df4a903e0a5b`).
+Its poster is extracted from that video. Both players load only when requested; starting either
+player pauses the other. Native controls and direct links remain available without JavaScript.
+Both use cases have VideoObject metadata, and the layout stacks on mobile.

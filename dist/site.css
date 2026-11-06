@@ -20,3 +20,16 @@
 @media(max-width:760px){.app-comparison{gap:12px;margin-bottom:22px}.comparison-app{gap:8px;font-size:14px}.comparison-app img{width:48px;height:48px}.comparison-context{font-size:11px}.hero-actions{gap:17px}.hero-intro{margin-bottom:0}}
 
 .device-requirement{display:inline-block;margin:0 0 18px;padding:10px 13px;border:1px solid #7e542d;border-radius:9px;background:#1b160f;color:var(--ink);font-size:15px;font-weight:700;line-height:1.5}
+
+/* Coffee Shop and Taxi use cases */
+.case-studies{align-items:start;gap:44px 48px}
+.case-studies-header{grid-column:1/-1;max-width:760px}
+.case-studies-header h2 span{color:var(--orange)}
+.case-studies-header>p:last-child{max-width:650px;color:var(--muted);font-size:17px;line-height:1.8;margin:24px 0 0}
+.video-case-study{min-width:0;padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:20px}
+.case-study-copy{min-height:174px}
+.case-study-copy h3{font-size:30px;line-height:1.2;letter-spacing:-1px;margin:12px 0 16px}
+.case-study-copy>p:last-child{color:var(--muted);font-size:15px;line-height:1.7;margin:0 0 24px}
+.video-case-study .trailer-player figcaption{max-width:320px;text-align:center;line-height:1.7}
+.case-studies-store{grid-column:1/-1;justify-self:center;max-width:100%}
+@media(max-width:760px){.case-studies{gap:28px}.video-case-study{padding:24px 20px}.case-study-copy{min-height:0}.case-studies-header>p:last-child{font-size:16px}}
