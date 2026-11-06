@@ -172,8 +172,12 @@ All prior card and video files remain in the repository and on their original UR
 
 The homepage now shows both use cases, with separate accessible players and direct video links.
 The existing Coffee Shop video is retained without changing its file or URL. The Taxi player uses
-the exact user-supplied `1106.mp4`, copied as `dist/assets/video/leftphonealert-taxi-2026-11-06.mp4`
-(SHA-256 `2587674fee4cd2ac73b15d808756a6cf03f2a9bf0cd678959fb7df4a903e0a5b`).
+a streaming copy of the user-supplied `1106.mp4`, served as
+`dist/assets/video/leftphonealert-taxi-2026-11-06-streaming.mp4`. The source SHA-256 is
+`2587674fee4cd2ac73b15d808756a6cf03f2a9bf0cd678959fb7df4a903e0a5b`.
+The MP4 metadata is placed before the media for playback without downloading the whole file.
+A passthrough export preserves all compressed audio and video samples; their hashes were compared
+and are identical. The user-supplied original remains untouched.
 Its poster is extracted from that video. Both players load only when requested; starting either
 player pauses the other. Native controls and direct links remain available without JavaScript.
 Both use cases have VideoObject metadata, and the layout stacks on mobile.
