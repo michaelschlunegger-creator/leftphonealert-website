@@ -181,3 +181,14 @@ and are identical. The user-supplied original remains untouched.
 Its poster is extracted from that video. Both players load only when requested; starting either
 player pauses the other. Native controls and direct links remain available without JavaScript.
 Both use cases have VideoObject metadata, and the layout stacks on mobile.
+
+
+## SEO update — 9 November 2026
+
+The homepage now has a descriptive Apple Watch / forgotten-iPhone title, description, social metadata and visible H1. The existing Find My ALERT message remains the prominent visual hook. A focused guide at `/apple-watch-left-behind-alert` explains the use case, Find My, setup, background use and timing without promising a fixed end-to-end response. The homepage and support page link to it. Its Article and BreadcrumbList data describe the visible content; no reviews or ratings were added.
+
+The sitemap lists five canonical pages. Homepage and support lastmod values reflect this update; the guide has its publication date. Keep these dates accurate after later changes.
+
+Checks before publication: HTML metadata and one H1 per changed page; parseable JSON-LD and sitemap XML; local links and assets; existing film-player and app-offer data preserved; homepage and guide desktop/mobile checks with no horizontal overflow or broken images.
+
+Search Console is under `leftphonealert.support@gmail.com`. On 9 November its historical sitemap report still showed a 20 October fetch failure, although the current live URL test passed. After publication, resubmit the sitemap and request indexing for the homepage and the new guide. Submissions do not guarantee crawl timing or rankings.
